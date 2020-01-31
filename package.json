@@ -1,0 +1,30 @@
+{
+  "name": "eventual-tron",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "build-css && concurrently --kill-others \"electron .\" \"npm run sass-watch\"",
+    "build-css": "node-sass --output-style=compressed src/style/main.scss > public/style.css",
+    "sass-watch": "node-sass --watch src/style/main.scss --source-map-embed public/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/eventual-tron.git"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/eventual-tron/issues"
+  },
+  "homepage": "https://github.com/nichoth/eventual-tron#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "electron": "^7.1.11",
+    "node-sass": "^4.13.1"
+  }
+}
