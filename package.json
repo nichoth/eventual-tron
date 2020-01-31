@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "build-css && concurrently --kill-others \"electron .\" \"npm run sass-watch\"",
-    "build-css": "node-sass --output-style=compressed src/style/style.scss > public/style.css",
-    "sass-watch": "node-sass --watch src/style/style.scss --source-map-embed public/style.css",
+    "start": "npm run build-css && concurrently --kill-others \"electron .\" \"npm run sass-watch\"",
+    "build-css": "node-sass --output-style=compressed src/style/style.scss > style.css",
+    "sass-watch": "node-sass --watch src/style/style.scss --source-map-embed style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,7 @@
     "@babel/plugin-transform-react-jsx": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "babel-plugin-module-resolver": "^4.0.0",
+    "concurrently": "^5.1.0",
     "electron": "^7.1.11",
     "node-sass": "^4.13.1"
   }
