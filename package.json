@@ -2,7 +2,7 @@
   "name": "eventual-tron",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "npm run build-css && concurrently --kill-others \"electron .\" \"npm run sass-watch\"",
     "build-css": "node-sass --output-style=compressed src/style/style.scss > style.css",
